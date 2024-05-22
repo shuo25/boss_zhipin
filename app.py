@@ -18,7 +18,7 @@ def search():
         return jsonify({'error': 'Query parameter is required'}), 400
 
     # 创建查询
-    s = Search(using=es, index=INDEX_NAME).query('multi_match', query=query, fields=['title', 'company', 'location', 'salary'])
+    s = Search(using=es, index=INDEX_NAME).query('multi_match', query=query, fields=['title', 'company', 'location', 'link'])
 
     # 执行查询
     response = s.execute()

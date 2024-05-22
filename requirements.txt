@@ -1,3 +1,4 @@
+faker
 scrapy
 elasticsearch
 elasticsearch-dsl
