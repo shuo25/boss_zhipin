@@ -5,7 +5,7 @@ from elasticsearch_dsl import Search
 app = Flask(__name__)
 
 # 配置Elasticsearch连接
-es = Elasticsearch([{'host': 'localhost', 'port': 9200, 'scheme': 'http'}], headers={'Accept': 'application/json'})
+es = Elasticsearch([{'host': 'elasticsearch', 'port': 9200, 'scheme': 'http'}], headers={'Accept': 'application/json'})
 
 # 配置Elasticsearch索引
 INDEX_NAME = 'boss_zhipin'

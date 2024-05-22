@@ -88,7 +88,7 @@ ITEM_PIPELINES = {
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 # 配置Elasticsearch连接
-ELASTICSEARCH_SERVER = 'localhost'  # 主机
+ELASTICSEARCH_SERVER = 'elasticsearch'  # 主机
 ELASTICSEARCH_PORT = 9200  # 端口
 ELASTICSEARCH_INDEX = 'boss_zhipin'  # 索引名
 ELASTICSEARCH_TYPE = '_doc'  # 文档类型
