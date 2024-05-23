@@ -1,7 +1,7 @@
 #!/bin/bash
 # 等待Elasticsearch服务启动
 echo "Waiting for Elasticsearch to start..."
-sleep 15
+sleep 60
 
 # 启动定时爬虫任务
 python schedule_crawl.py &

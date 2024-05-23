@@ -88,11 +88,8 @@ ITEM_PIPELINES = {
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 # 配置Elasticsearch连接
-ELASTICSEARCH_SERVER = 'elasticsearch'  # 主机
+ELASTICSEARCH_SERVER = '127.0.0.1'  # Elasticsearch主机地址 docke容器内替换成elasticsearch
 ELASTICSEARCH_PORT = 9200  # 端口
 ELASTICSEARCH_INDEX = 'boss_zhipin'  # 索引名
 ELASTICSEARCH_TYPE = '_doc'  # 文档类型
 ELASTICSEARCH_UNIQ_KEY = 'link'  # 用于去重的字段
-
-# 其他Scrapy设置
-ROBOTSTXT_OBEY = False

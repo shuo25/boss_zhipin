@@ -1,11 +1,13 @@
 from flask import Flask, jsonify, request
 from elasticsearch import Elasticsearch
 from elasticsearch_dsl import Search
+from scrapy.utils.project import get_project_settings
 
 app = Flask(__name__)
 
+settings = get_project_settings()
 # 配置Elasticsearch连接
-es = Elasticsearch([{'host': 'elasticsearch', 'port': 9200, 'scheme': 'http'}], headers={'Accept': 'application/json'})
+es = Elasticsearch([{'host': settings.get('ELASTICSEARCH_SERVER'), 'port': settings.get("ELASTICSEARCH_PORT"), 'scheme': 'http'}], headers={'Accept': 'application/json'})
 
 # 配置Elasticsearch索引
 INDEX_NAME = 'boss_zhipin'
